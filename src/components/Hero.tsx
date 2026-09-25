@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, MapPin, Sparkles, Download } from "lucide-react";
 import { profile, socials } from "../data/profile";
 import portrait from "../assets/omar.jpg";
 import "./hero.css";
@@ -32,6 +32,7 @@ export function Hero() {
           <div className="hero__actions">
             <a href="#projects" className="btn btn--primary">View my work <ArrowRight size={17} /></a>
             <a href="#contact" className="btn btn--ghost">Get in touch</a>
+            <a href={`${import.meta.env.BASE_URL}Omar-Sherif-Elghamry-CV.pdf`} download className="btn btn--ghost"><Download size={17} /> Download CV</a>
           </div>
 
           <div className="hero__meta">

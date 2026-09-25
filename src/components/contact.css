@@ -5,3 +5,5 @@
 .contact__socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.4rem; margin-top: 2.2rem; }
 .contact__social { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.9rem; transition: color 0.2s; }
 .contact__social:hover { color: var(--accent-2); }
+
+.contact__actions { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }

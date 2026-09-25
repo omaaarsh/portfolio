@@ -16,9 +16,10 @@ export function Contact() {
               {profile.availability}. Whether it's a NestJS API, a payment integration, a database problem,
               or an AI service — I'd love to hear about it.
             </p>
-            <a href="mailto:omarsherifelghamry@gmail.com" className="btn btn--primary contact__cta">
-              Email me
-            </a>
+            <div className="contact__actions">
+              <a href="mailto:omarsherifelghamry@gmail.com" className="btn btn--primary">Email me</a>
+              <a href={`${import.meta.env.BASE_URL}Omar-Sherif-Elghamry-CV.pdf`} download className="btn btn--ghost">Download CV</a>
+            </div>
             <div className="contact__socials">
               {socials.map((s) => (
                 <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="contact__social">
