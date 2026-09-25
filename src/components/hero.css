@@ -38,3 +38,13 @@
   .hero__visual { order: -1; }
   .orb { width: min(260px, 70vw); }
 }
+
+/* portrait */
+.portrait { position: relative; width: min(360px, 82vw); display: grid; place-items: center; }
+.portrait__glow { position: absolute; inset: -18%; background: radial-gradient(circle at 50% 40%, var(--glow), transparent 60%); filter: blur(20px); z-index: 0; }
+.portrait__img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 10%; border-radius: 24px; border: 1px solid var(--border-strong); box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+.portrait__ring { position: absolute; inset: -18px; border-radius: 32px; border: 1px dashed var(--border-strong); opacity: 0.6; z-index: 0; animation: spin 34s linear infinite; }
+.portrait__badge { position: absolute; z-index: 2; bottom: 14px; left: -14px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.85rem; font-size: 0.82rem; color: var(--text); border-radius: 999px; }
+.portrait__dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 10px #34d399; animation: pulse 1.8s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+@media (max-width: 860px) { .portrait { width: min(280px, 74vw); } .portrait__badge { left: 0; } }

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Sparkles } from "lucide-react";
 import { profile, socials } from "../data/profile";
+import portrait from "../assets/omar.jpg";
 import "./hero.css";
 
 const roles = ["Node.js / NestJS", "Python / FastAPI", "Event-Driven Systems", "AI Integration"];
@@ -51,18 +52,11 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="orb glass">
-            <pre className="orb__code">
-{`const omar = {
-  role: "Backend & AI",
-  stack: ["NestJS",
-    "FastAPI", "Postgres"],
-  ships: "production",
-  freelance: true,
-};`}
-            </pre>
-            <div className="orb__ring orb__ring--1" />
-            <div className="orb__ring orb__ring--2" />
+          <div className="portrait">
+            <div className="portrait__glow" />
+            <img className="portrait__img" src={portrait} alt="Omar Sherif Elghamry" width={360} height={450} />
+            <div className="portrait__ring" />
+            <span className="portrait__badge glass"><i className="portrait__dot" /> Available for work</span>
           </div>
         </motion.div>
       </div>
