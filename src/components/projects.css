@@ -12,3 +12,7 @@
 .project__link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 600; color: var(--text); transition: color 0.2s; }
 .project__link:hover { color: var(--accent-2); }
 @media (max-width: 860px) { .projects__grid { grid-template-columns: 1fr; } .project--featured { grid-column: span 1; } }
+
+a.project__title { display: inline-block; transition: color 0.2s; }
+a.project__title:hover { color: var(--accent-2); }
+.project__link--primary { color: var(--accent-2); }

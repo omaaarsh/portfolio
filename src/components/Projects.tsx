@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowUpRight, Star } from "lucide-react";
 import { GitHubIcon } from "./ui/BrandIcons";
 import { projects } from "../data/profile";
@@ -21,12 +22,15 @@ export function Projects() {
               >
                 {p.featured && <span className="project__flag"><Star size={12} /> Flagship</span>}
                 <div className="project__icon"><p.icon size={22} /></div>
-                <h3 className="project__title">{p.title}</h3>
+                <Link to={`/projects/${p.slug}`} className="project__title">{p.title}</Link>
                 <p className="project__desc">{p.desc}</p>
                 <div className="project__tags">
                   {p.tags.map((t) => <span key={t}>{t}</span>)}
                 </div>
                 <div className="project__links">
+                  <Link to={`/projects/${p.slug}`} className="project__link project__link--primary">
+                    View details <ArrowUpRight size={16} />
+                  </Link>
                   {p.repo && (
                     <a href={p.repo} target="_blank" rel="noreferrer" className="project__link">
                       <GitHubIcon width={16} height={16} /> Code

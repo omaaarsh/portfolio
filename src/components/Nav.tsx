@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import "./nav.css";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#experience", label: "Experience" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { id: "about", label: "About" },
+  { id: "services", label: "Services" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
 ];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -21,6 +24,15 @@ export function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const go = (id: string) => {
+    setOpen(false);
+    if (location.pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/#${id}`);
+    }
+  };
 
   return (
     <motion.header
@@ -30,12 +42,12 @@ export function Nav() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="container nav__inner">
-        <a href="#top" className="nav__brand">OS<span>.</span></a>
+        <Link to="/" className="nav__brand">OS<span>.</span></Link>
         <nav className={`nav__links ${open ? "is-open" : ""}`} aria-label="Main">
           {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+            <button key={l.id} className="nav__link" onClick={() => go(l.id)}>{l.label}</button>
           ))}
-          <a className="nav__cta" href="#contact" onClick={() => setOpen(false)}>Hire me</a>
+          <button className="nav__cta" onClick={() => go("contact")}>Hire me</button>
         </nav>
         <button className="nav__burger" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
           <span /><span /><span />

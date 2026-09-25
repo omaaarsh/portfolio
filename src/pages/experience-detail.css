@@ -1,0 +1,25 @@
+.xp { padding-block: 2rem 4rem; }
+.xp__meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; padding: 1.5rem; border-radius: 16px; }
+.xp__meta div { display: grid; gap: 0.3rem; }
+.xp__meta span { font-size: 0.78rem; color: var(--faint); text-transform: uppercase; letter-spacing: 0.08em; }
+.xp__meta b { font-size: 0.98rem; }
+.xp__meta a { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--accent-2); }
+.xp__h2 { font-family: var(--font-head); font-size: 1.6rem; margin: 2.6rem 0 1.2rem; }
+.xp__areas { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.xp__area { padding: 1.5rem; border-radius: 16px; transition: all 0.3s var(--ease); }
+.xp__area:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+.xp__area-head { display: flex; align-items: center; gap: 0.7rem; }
+.xp__icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 11px; color: #fff; background: linear-gradient(120deg, var(--accent), var(--accent-2)); box-shadow: 0 8px 20px var(--glow); }
+.xp__area-head h3 { font-family: var(--font-head); font-size: 1.15rem; }
+.xp__area ul { list-style: none; margin-top: 1rem; display: grid; gap: 0.55rem; }
+.xp__area li { position: relative; padding-left: 1.2rem; font-size: 0.92rem; color: var(--text); }
+.xp__area li::before { content: "▹"; position: absolute; left: 0; color: var(--accent-2); }
+.xp__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.xp__tags span { font-family: var(--font-mono); font-size: 0.78rem; padding: 0.35rem 0.7rem; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); color: var(--accent-3); }
+.xp__grad { margin-top: 2.6rem; padding: 1.8rem; border-radius: 18px; }
+.xp__grad em { color: var(--accent-3); font-style: normal; font-size: 1rem; }
+.xp__gradsummary { color: var(--muted); font-style: italic; margin-top: 0.4rem; }
+.xp__gradlist { list-style: none; margin: 1rem 0 1.5rem; display: grid; gap: 0.55rem; }
+.xp__gradlist li { position: relative; padding-left: 1.2rem; color: var(--text); font-size: 0.94rem; }
+.xp__gradlist li::before { content: "▹"; position: absolute; left: 0; color: var(--accent-2); }
+@media (max-width: 860px) { .xp__meta { grid-template-columns: 1fr 1fr; } .xp__areas { grid-template-columns: 1fr; } }

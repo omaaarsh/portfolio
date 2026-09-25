@@ -8,7 +8,7 @@ export function About() {
     <section id="about" className="section">
       <div className="container about">
         <div className="about__text">
-          <SectionHeading eyebrow="// about me" title="Backend engineer who ships to production" />
+          <SectionHeading eyebrow="// about me" title="Backend engineer who ships to production" to="/experience" />
           <Reveal delay={0.05}>
             <p className="about__lead">{profile.about}</p>
           </Reveal>

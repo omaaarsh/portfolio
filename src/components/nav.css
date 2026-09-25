@@ -24,3 +24,7 @@
   }
   .nav__links.is-open { transform: translateY(0); }
 }
+
+.nav__link { background: none; border: 0; cursor: pointer; font: inherit; font-size: 0.95rem; color: var(--muted); transition: color 0.2s; padding: 0; }
+.nav__link:hover { color: var(--text); }
+.nav__cta { border: 0; cursor: pointer; font: inherit; }

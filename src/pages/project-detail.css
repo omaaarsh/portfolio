@@ -1,0 +1,24 @@
+.detail { display: grid; grid-template-columns: 1.6fr 0.9fr; gap: 2.5rem; padding-block: 2rem 3rem; align-items: start; }
+.detail__lead { font-size: 1.15rem; color: var(--text); line-height: 1.7; }
+.detail__h2 { font-family: var(--font-head); font-size: 1.4rem; margin-top: 2.2rem; display: flex; align-items: center; gap: 0.5rem; color: var(--accent-3); }
+.detail__list { list-style: none; margin-top: 1rem; display: grid; gap: 0.7rem; }
+.detail__list li { display: flex; gap: 0.6rem; align-items: flex-start; color: var(--text); }
+.detail__list li svg { color: var(--accent-2); flex-shrink: 0; margin-top: 3px; }
+.detail__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.detail__chips span { font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: 10px; background: var(--surface); border: 1px solid var(--border); color: var(--accent-3); }
+.detail__card { position: sticky; top: 90px; padding: 1.6rem; border-radius: 18px; display: grid; gap: 1rem; }
+.detail__row { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.95rem; color: var(--muted); }
+.detail__row b { color: var(--text); text-align: right; }
+.detail__row--col { flex-direction: column; }
+.detail__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+.detail__tags em { font-family: var(--font-mono); font-style: normal; font-size: 0.74rem; padding: 0.25rem 0.55rem; border-radius: 7px; background: var(--surface-2); border: 1px solid var(--border); color: var(--accent-3); }
+.detail__links { display: grid; gap: 0.6rem; margin-top: 0.5rem; }
+.detail__links .btn { justify-content: center; }
+.detail__more { padding-block: 2rem 4rem; }
+.detail__more h3 { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: 1rem; }
+.detail__morelist { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.detail__morecard { display: flex; align-items: center; gap: 0.7rem; padding: 1rem 1.2rem; border-radius: 14px; color: var(--text); transition: all 0.25s var(--ease); }
+.detail__morecard:hover { transform: translateY(-3px); border-color: var(--border-strong); color: var(--accent-2); }
+.detail-missing { padding-top: 140px; text-align: center; display: grid; gap: 1.5rem; place-items: center; min-height: 60vh; }
+.detail-missing h1 { font-family: var(--font-head); font-size: 2rem; }
+@media (max-width: 860px) { .detail { grid-template-columns: 1fr; } .detail__card { position: static; } .detail__morelist { grid-template-columns: 1fr; } }

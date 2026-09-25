@@ -13,3 +13,5 @@
 .job__points li::before { content: "▹"; position: absolute; left: 0; color: var(--accent-2); }
 .job__stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
 .job__stack span { font-family: var(--font-mono); font-size: 0.76rem; padding: 0.3rem 0.65rem; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); color: var(--accent-3); }
+
+.timeline__cta { margin-top: 1.6rem; text-align: center; }

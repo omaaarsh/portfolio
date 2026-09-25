@@ -1,29 +1,25 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Background } from "./components/Background";
 import { Nav } from "./components/Nav";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Services } from "./components/Services";
-import { Experience } from "./components/Experience";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { ScrollToTop } from "./components/ScrollToTop";
+import { Home } from "./pages/Home";
+import { ProjectDetail } from "./pages/ProjectDetail";
+import { ExperienceDetail } from "./pages/ExperienceDetail";
 
 export default function App() {
   return (
-    <>
+    <BrowserRouter>
+      <ScrollToTop />
       <Background />
       <Nav />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/experience" element={<ExperienceDetail />} />
+        <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }

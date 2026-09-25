@@ -16,3 +16,8 @@
   background: linear-gradient(90deg, var(--accent-2), var(--accent));
   box-shadow: 0 0 18px var(--glow);
 }
+
+.section-title--link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text); transition: color 0.25s; }
+.section-title--link:hover { color: var(--accent-2); }
+.section-title__arrow { opacity: 0.6; transition: transform 0.25s var(--ease); }
+.section-title--link:hover .section-title__arrow { transform: translate(3px, -3px); opacity: 1; }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { experience } from "../data/profile";
 import { Reveal } from "./ui/Reveal";
 import { SectionHeading } from "./ui/SectionHeading";
@@ -33,6 +34,11 @@ export function Experience() {
             </Reveal>
           ))}
         </div>
+        <Reveal>
+          <div className="timeline__cta">
+            <Link to="/experience" className="btn btn--ghost">See my full experience at Techkhana »</Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
