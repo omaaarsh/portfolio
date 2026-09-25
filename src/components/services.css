@@ -1,0 +1,9 @@
+.services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.service { padding: 1.6rem; border-radius: 16px; height: 100%; transition: all 0.3s var(--ease); position: relative; overflow: hidden; }
+.service::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 120% at 0% 0%, var(--glow), transparent 55%); opacity: 0; transition: opacity 0.3s; }
+.service:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+.service:hover::before { opacity: 0.5; }
+.service__icon { position: relative; width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; color: #fff; background: linear-gradient(120deg, var(--accent), var(--accent-2)); box-shadow: 0 8px 22px var(--glow); }
+.service__title { position: relative; font-family: var(--font-head); font-size: 1.15rem; margin-top: 1rem; }
+.service__desc { position: relative; color: var(--muted); font-size: 0.94rem; margin-top: 0.5rem; }
+@media (max-width: 860px) { .services__grid { grid-template-columns: 1fr; } }

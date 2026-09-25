@@ -1,0 +1,3 @@
+.footer { border-top: 1px solid var(--border); padding-block: 1.8rem; }
+.footer__inner { display: flex; justify-content: space-between; align-items: center; color: var(--faint); font-size: 0.85rem; gap: 1rem; flex-wrap: wrap; }
+.footer__built { font-family: var(--font-mono); }

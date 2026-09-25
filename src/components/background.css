@@ -1,0 +1,17 @@
+.bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: var(--bg); }
+.bg-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(168,139,250,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168,139,250,0.05) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+.blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.5; will-change: transform; }
+.blob-1 { width: 46vw; height: 46vw; background: #7c3aed; top: -12vw; left: -8vw; animation: drift1 22s var(--ease) infinite alternate; }
+.blob-2 { width: 40vw; height: 40vw; background: #4c1d95; top: 30vh; right: -12vw; animation: drift2 26s var(--ease) infinite alternate; }
+.blob-3 { width: 34vw; height: 34vw; background: #2563eb; bottom: -14vw; left: 28vw; opacity: 0.32; animation: drift3 30s var(--ease) infinite alternate; }
+@keyframes drift1 { to { transform: translate(8vw, 10vh) scale(1.15); } }
+@keyframes drift2 { to { transform: translate(-10vw, -6vh) scale(1.1); } }
+@keyframes drift3 { to { transform: translate(6vw, -8vh) scale(1.2); } }
+@media (prefers-reduced-motion: reduce) { .blob { animation: none; } }

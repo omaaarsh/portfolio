@@ -1,0 +1,15 @@
+.timeline { display: grid; gap: 1.4rem; }
+.job { padding: 1.8rem; border-radius: 18px; border-left: 3px solid var(--accent); transition: all 0.3s var(--ease); }
+.job:hover { border-color: var(--border-strong); border-left-color: var(--accent-2); transform: translateX(4px); }
+.job__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.job__role { font-family: var(--font-head); font-size: 1.3rem; }
+.job__org { color: var(--accent-2); margin-top: 0.2rem; font-weight: 600; }
+.job__org a:hover { text-decoration: underline; }
+.job__grade { margin-left: 0.7rem; font-size: 0.75rem; color: var(--accent-3); background: var(--surface-2); padding: 0.15rem 0.55rem; border-radius: 999px; border: 1px solid var(--border); }
+.job__period { font-family: var(--font-mono); font-size: 0.85rem; color: var(--faint); white-space: nowrap; }
+.job__summary { color: var(--muted); margin-top: 0.8rem; font-style: italic; }
+.job__points { list-style: none; margin-top: 1rem; display: grid; gap: 0.55rem; }
+.job__points li { position: relative; padding-left: 1.3rem; color: var(--text); font-size: 0.95rem; }
+.job__points li::before { content: "▹"; position: absolute; left: 0; color: var(--accent-2); }
+.job__stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+.job__stack span { font-family: var(--font-mono); font-size: 0.76rem; padding: 0.3rem 0.65rem; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); color: var(--accent-3); }

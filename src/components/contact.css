@@ -1,0 +1,7 @@
+.contact { padding: clamp(2rem, 1rem + 4vw, 4rem); border-radius: 24px; text-align: center; background: radial-gradient(120% 140% at 50% 0%, rgba(124,58,237,0.16), var(--surface)); border-color: var(--border-strong); }
+.contact__title { font-family: var(--font-head); font-size: var(--text-h2); font-weight: 700; margin-top: 0.7rem; letter-spacing: -0.02em; }
+.contact__text { color: var(--muted); max-width: 52ch; margin: 1rem auto 0; }
+.contact__cta { margin-top: 2rem; }
+.contact__socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.4rem; margin-top: 2.2rem; }
+.contact__social { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.9rem; transition: color 0.2s; }
+.contact__social:hover { color: var(--accent-2); }
