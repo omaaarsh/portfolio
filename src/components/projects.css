@@ -1,18 +1,34 @@
-.projects__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-.project { padding: 1.6rem; border-radius: 18px; display: flex; flex-direction: column; height: 100%; position: relative; transition: border-color 0.3s; }
-.project:hover { border-color: var(--border-strong); }
-.project--featured { grid-column: span 2; background: linear-gradient(135deg, rgba(124,58,237,0.14), var(--surface)); border-color: var(--border-strong); }
-.project__flag { position: absolute; top: 1.1rem; right: 1.1rem; display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; color: var(--accent-3); background: var(--surface-2); border: 1px solid var(--border); padding: 0.25rem 0.6rem; border-radius: 999px; }
-.project__icon { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; color: var(--accent-2); background: var(--surface-2); border: 1px solid var(--border); }
-.project__title { font-family: var(--font-head); font-size: 1.25rem; margin-top: 1rem; }
-.project__desc { color: var(--muted); font-size: 0.94rem; margin-top: 0.5rem; flex: 1; }
-.project__tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.1rem; }
-.project__tags span { font-family: var(--font-mono); font-size: 0.72rem; padding: 0.28rem 0.6rem; border-radius: 7px; background: var(--surface); border: 1px solid var(--border); color: var(--accent-3); }
-.project__links { display: flex; gap: 1rem; margin-top: 1.2rem; }
-.project__link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 600; color: var(--text); transition: color 0.2s; }
-.project__link:hover { color: var(--accent-2); }
-@media (max-width: 860px) { .projects__grid { grid-template-columns: 1fr; } .project--featured { grid-column: span 1; } }
+.projects__label { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.9rem; }
+.projects__list { list-style: none; border-top: 1px solid var(--border-strong); }
+.projects__list li { border-bottom: 1px solid var(--border); }
 
-a.project__title { display: inline-block; transition: color 0.2s; }
-a.project__title:hover { color: var(--accent-2); }
-.project__link--primary { color: var(--accent-2); }
+.prow {
+  display: grid; grid-template-columns: 3.2rem 1fr auto 1.5rem; align-items: start; gap: 0 1.4rem;
+  padding: 1.5rem 1rem 1.5rem 0.5rem; color: var(--text);
+  transition: background-color 0.25s var(--ease);
+}
+.prow:hover, .prow:focus-visible { background: var(--surface); }
+.prow:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.prow__num { font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; color: var(--faint); padding-top: 0.1rem; transition: color 0.25s; }
+.prow:hover .prow__num { color: var(--accent); }
+.prow__body { display: grid; gap: 0.35rem; min-width: 0; }
+.prow__title { font-size: 1.15rem; }
+.prow__title b { font-family: var(--font-head); font-weight: 700; letter-spacing: -0.01em; transition: color 0.25s; }
+.prow:hover .prow__title b { color: var(--accent); }
+.prow__kind { color: var(--text-2); }
+.prow__summary { color: var(--muted); font-size: 0.95rem; max-width: 62ch; }
+.prow__metrics { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.35rem; font-size: 0.84rem; color: var(--muted); }
+.prow__metrics em { font-style: normal; font-family: var(--font-head); font-weight: 700; color: var(--accent); }
+.prow__stack { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); white-space: nowrap; padding-top: 0.3rem; }
+.prow__arrow { color: var(--faint); margin-top: 0.15rem; transition: transform 0.25s var(--ease), color 0.25s; }
+.prow:hover .prow__arrow { color: var(--accent); transform: translate(3px, -3px); }
+
+.projects__foot { margin-top: 2rem; display: flex; justify-content: flex-end; }
+
+@media (max-width: 760px) {
+  .prow { grid-template-columns: 2.4rem 1fr 1.2rem; padding-right: 0.4rem; }
+  .prow__stack { grid-column: 2; grid-row: 2; white-space: normal; padding-top: 0.6rem; }
+  .prow__arrow { grid-column: 3; grid-row: 1; }
+  .projects__foot { justify-content: stretch; }
+  .projects__foot .btn { width: 100%; justify-content: center; }
+}
