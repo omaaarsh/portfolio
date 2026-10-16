@@ -1,28 +1,32 @@
 :root {
-  /* palette — dark premium purple */
-  --bg: #0b0910;
-  --bg-2: #0f0c17;
-  --surface: rgba(255, 255, 255, 0.035);
-  --surface-2: rgba(255, 255, 255, 0.06);
-  --border: rgba(168, 139, 250, 0.14);
-  --border-strong: rgba(168, 139, 250, 0.35);
-  --text: #ecebf4;
-  --muted: #a29db6;
-  --faint: #6f6a82;
-  --accent: #7c3aed;
-  --accent-2: #a78bfa;
-  --accent-3: #c4b5fd;
-  --glow: rgba(124, 58, 237, 0.45);
+  /* palette — light zinc + indigo, matching the project portfolio PDF */
+  --bg: #ffffff;
+  --bg-2: #fafafa;
+  --surface: #f4f4f5;
+  --surface-2: #e4e4e7;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --text: #09090b;
+  --text-2: #3f3f46;
+  --muted: #52525b;
+  --faint: #71717a;
+  --accent: #4338ca;
+  --accent-2: #4338ca;
+  --accent-3: #3730a3;
+  --accent-hover: #3730a3;
+  --accent-soft: #eef2ff;
+  --glow: rgba(67, 56, 202, 0.18);
+  --shadow: 0 1px 2px rgba(24, 24, 27, 0.04), 0 12px 32px rgba(24, 24, 27, 0.06);
 
   /* type scale */
   --font-head: "Space Grotesk", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --text-hero: clamp(2.6rem, 1rem + 8vw, 6rem);
   --text-h2: clamp(1.7rem, 1rem + 2.4vw, 2.8rem);
 
   --space-section: clamp(4.5rem, 3rem + 6vw, 9rem);
-  --radius: 18px;
+  --radius: 12px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -49,8 +53,8 @@ img { max-width: 100%; display: block; }
 /* scrollbar */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #241d33; border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: #33284a; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--faint); }
 
 .container { width: min(1120px, 92vw); margin-inline: auto; }
 .section { padding-block: var(--space-section); position: relative; }
@@ -63,16 +67,10 @@ img { max-width: 100%; display: block; }
   color: var(--accent-2);
 }
 
-.gradient-text {
-  background: linear-gradient(120deg, var(--accent-3), var(--accent) 60%, #7dd3fc);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+.gradient-text { color: var(--text); }
 
 .glass {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  backdrop-filter: blur(12px);
 }

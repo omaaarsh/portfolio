@@ -13,8 +13,7 @@
   height: 4px;
   margin-top: 1rem;
   border-radius: 4px;
-  background: linear-gradient(90deg, var(--accent-2), var(--accent));
-  box-shadow: 0 0 18px var(--glow);
+  background: var(--accent);
 }
 
 .section-title--link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text); transition: color 0.25s; }
